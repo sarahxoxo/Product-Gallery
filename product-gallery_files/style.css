@@ -1,0 +1,183 @@
+body {
+  font-family: Roboto;
+}
+#app {
+  display: grid;
+  grid-template-columns: repeat(8,120px);
+  grid-template-rows: repeat(20,100px);
+  margin: 0 auto;
+  width: 960px;
+}
+.title {
+  grid-column: 3 / span 4; /* 物件起始線 / 終點線 = 物件所佔的空間數 */
+  grid-row: 1 / span 1;
+  text-align: center;
+}
+.title span {
+  font-size: 20px;
+  color: #FFFFFF;
+  background: #000;
+  padding: 2px 10px;
+}
+.title h1 {
+  font-size: 72px;
+  color: #000000;
+  margin: 0;
+}
+.grid-template {
+  display: grid;
+  grid-template-columns: repeat(8, 120px);
+  grid-template-rows: repeat(20, 100px);
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+.bg {
+  background-size: cover;
+  background-position: center;
+}
+.first .bg {
+  background-image: url(img/1.jpg);
+  grid-column: 1 / span 4;
+  grid-row: 3 /span 4;
+}
+.first .overlap-text {
+  grid-column: 1 / span 3;
+  grid-row: 2 /span 2;
+  margin-bottom: 17px;
+}
+.overlap-text {
+  font-size: 48px;
+  margin: 0;
+  font-weight: bolder;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.overlap-text p {
+  overflow: hidden;
+}
+.first .overlap-text p {
+  margin: 0 0 26px;
+  height: 22px;
+  opacity: 0.3;
+}
+.overlap-text::before {
+  position: absolute;
+  overflow: hidden;
+}
+.overlap-text::after {
+  position: absolute;
+}
+.first .overlap-text::before {
+  content: "LINEN BLAZER";
+  top: 60px;
+  height: 19px;
+  opacity: 0.1;
+}
+.first .overlap-text::after {
+  content: "LINEN BLAZER";
+  top: 80px;
+}
+.border-box {
+  box-sizing: border-box;
+  border: 20px solid #50E3C2;
+}
+.first .border-box {
+  grid-column: 3 / span 3;
+  grid-row: 2 /span 3;
+  margin: 50px 60px;
+  z-index: -1;
+}
+.slash-box {
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #50E3C2), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, #50E3C2), color-stop(0.75, #50E3C2), color-stop(0.75, transparent), to(transparent));
+}
+.first .slash-box {
+  background-size: 60px 60px;
+  grid-column: 1 / span 3;
+  grid-row: 6 /span 2;
+  margin: 45px 58px;
+}
+.first .italic-text {
+  margin: 26px 52px 0px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  grid-column: 4 / span 3;
+  grid-row: 6 / span 1;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.italic-text {
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+}
+.first .number {
+  grid-column: 1 / 1;
+  grid-row: 7 / 7;
+  margin: 0;
+}
+.number {
+  font-size: 48px;
+  font-weight: bolder;
+}
+.second .bg {
+  background-image: url(img/2.jpg);
+  grid-column: 6 / span 2;
+  grid-row: 4 /span 2;
+}
+.second .border-box {
+  grid-column: 7 /span 2;
+  grid-row: 3 /span 2;
+  z-index: -1;
+}
+.second .italic-text {
+  grid-column: 5 / span 2;
+  grid-row: 3 /span 1;
+  margin: auto 0 0 auto;
+}
+.second .filled-box {
+  grid-column: 6 /span 3;
+  grid-row: 3 / span 3;
+  background: #50e4c3;
+  z-index: -1;
+  margin: 50px 60px;
+}
+.second .number {
+  grid-column: 8 / span 1;
+  grid-row: 3 / span 1;
+  text-align: right;
+  margin: 0;
+}
+.second .overlap-text {
+  grid-column: 7 / span 2;
+  grid-row: 6 /span 1;
+  justify-content: flex-end;
+}
+.second .overlap-text p {
+  margin: 0 0 68px;
+  height: 26px;
+  opacity: 0.5;
+}
+.second .overlap-text::before {
+  content: "FREELIFT";
+  top: -6px;
+  height: 21px;
+  opacity: 0.3;
+}
+.second .overlap-text::after{
+  content: "FREELIFT";
+  top: 23px;
+}
+.third .bg {
+  background-image: url(img/3.jpg);
+  grid-column: 1 / span 4;
+  grid-row: 9 / span 2;
+}
+.third .border-box {
+  grid-column: 3 / span 3;
+  grid-row: 9 / span 2;
+}
